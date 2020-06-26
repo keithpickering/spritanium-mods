@@ -8,6 +8,8 @@ html {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
   overflow: hidden;
+  background: url(sunburst.png) no-repeat center center;
+  background-size: cover;
 }
 
 .content {
