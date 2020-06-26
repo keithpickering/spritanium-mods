@@ -1,0 +1,98 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 56px;
+  width: 100%;
+}
+
+.sunburst {
+  width: 100vmax;
+  height: 100vmax;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 0;
+}
+
+.sunburst::after {
+  transform: rotate(180deg);
+}
+
+.sunburst::before, .sunburst::after {
+  content: '';
+  display: block;
+  width: 150%;
+  height: 75%;
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  transform-origin: bottom center;
+  background-size: 100% 200%;
+  background-image: linear-gradient(180deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(170deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(160deg, transparent 50%, #372f3b 50%, #372f3b 100%), linear-gradient(150deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(140deg, transparent 50%, #372f3b 50%, #372f3b 100%), linear-gradient(130deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(120deg, transparent 50%, #372f3b 50%, #372f3b 100%), linear-gradient(110deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(100deg, transparent 50%, #372f3b 50%, #372f3b 100%), linear-gradient(90deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(80deg, transparent 50%, #372f3b 50%, #372f3b 100%), linear-gradient(70deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(60deg, transparent 50%, #372f3b 50%, #372f3b 100%), linear-gradient(50deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(40deg, transparent 50%, #372f3b 50%, #372f3b 100%), linear-gradient(30deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(20deg, transparent 50%, #372f3b 50%, #372f3b 100%), linear-gradient(10deg, transparent 50%, #3f3644 50%, #3f3644 100%), linear-gradient(0deg, transparent 50%, #372f3b 50%, #372f3b 100%);
+}
+
+@keyframes rot1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rot2 {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  padding: 24px 48px;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: #f6518b;
+  border-radius: 100px;
+  text-decoration: none;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .btn {
+    font-size: 36px;
+  }
+}
+.btn:hover, .btn:focus {
+  background: #e2427a;
+}
