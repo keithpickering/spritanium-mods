@@ -98,3 +98,8 @@ html {
 .btn:hover, .btn:focus {
   background: #e2427a;
 }
+
+p {
+  color: white;
+  margin-top: 64px;
+}
